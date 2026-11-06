@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kely Romero · Desarrolladora y analista de datos</title>
+  <meta name="description" content="Portafolio de Kely Romero: desarrolladora web y analista de datos en Loja, Ecuador. Next.js, TypeScript, Supabase, Python y machine learning.">
+  <meta property="og:title" content="Kely Romero · Desarrolladora y analista de datos">
+  <meta property="og:description" content="Apps web full-stack y modelos de machine learning con raíces en la investigación agrícola.">
+  <meta property="og:image" content="assets/foto.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234d7c0f'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='monospace'>&gt;_</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Aplica el tema guardado antes de pintar para evitar parpadeo. Claro por defecto.
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a href="#inicio" class="logo mono">~/kely-romero<span class="caret">_</span></a>
+      <nav class="links mono" id="links">
+        <a href="#sobre-mi">./sobre-mi</a>
+        <a href="#proyectos">./proyectos</a>
+        <a href="#experiencia">./experiencia</a>
+        <a href="#stack">./stack</a>
+        <a href="#terminal">./terminal</a>
+        <a href="#contacto">./contacto</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Cambiar a modo oscuro" title="Cambiar tema">
+          <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero wrap" id="inicio">
+      <div class="hero-text">
+        <div class="prompt mono">$ whoami</div>
+        <h1>Kely Romero.<br>Desarrolladora <span class="acc">&amp; datos</span>.</h1>
+        <p class="typed mono" aria-live="polite"><span class="muted">&gt;</span> <span id="typed"></span><span class="caret">|</span></p>
+        <p class="lead">Construyo apps web full-stack y modelos de machine learning. Vengo de la investigación agrícola: sé convertir datos de campo en decisiones y problemas reales en software que funciona.</p>
+        <div class="btns mono">
+          <a class="btn primary" href="#proyectos">ver_proyectos()</a>
+          <a class="btn ghost" href="assets/CV_Kely_Romero.pdf" download>cv.pdf ↓</a>
+          <a class="btn ghost" href="assets/CV_Kely_Romero_English.pdf" download>cv_en.pdf ↓</a>
+        </div>
+        <div class="socials mono">
+          <a href="https://github.com/Kely944" target="_blank" rel="noopener">github</a>
+          <a href="https://www.linkedin.com/in/kely-tamara-romero" target="_blank" rel="noopener">linkedin</a>
+          <button class="link-btn" data-copy="kely.romero@unl.edu.ec">copiar_email</button>
+        </div>
+      </div>
+      <div class="term card reveal">
+        <div class="bar"><i></i><i></i><i></i><span class="mono">perfil.json</span></div>
+        <img src="assets/foto.jpg" alt="Foto de Kely Romero" width="476" height="596">
+        <pre class="mono"><b>"ubicacion"</b>: "Loja, Ecuador",
+<b>"estado"</b>:    <span class="ok">"disponible"</span>,
+<b>"remoto"</b>:    true,
+<b>"idiomas"</b>:   ["es nativo", "en B1"]</pre>
+      </div>
+    </section>
+
+    <!-- RECRUITER TL;DR -->
+    <section class="wrap tldr reveal" aria-label="Resumen rápido para reclutadores">
+      <div class="tldr-head mono"><span class="dot"></span> modo_reclutador: resumen en 30 segundos</div>
+      <div class="tldr-grid">
+        <div><small class="mono">Rol buscado</small><p>Desarrolladora web junior · Analista de datos</p></div>
+        <div><small class="mono">Fuerte en</small><p>Next.js, TypeScript, Supabase, Python, estadística</p></div>
+        <div><small class="mono">Diferencial</small><p>Dominio agro + rigor de investigación con datos reales</p></div>
+        <div><small class="mono">Disponibilidad</small><p>Inmediata · remoto o Loja</p></div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="wrap stats">
+      <div class="stat reveal"><b class="mono" data-count="3">0</b><span>proyectos publicados</span></div>
+      <div class="stat reveal"><b class="mono" data-count="7">0</b><span>módulos en app en producción</span></div>
+      <div class="stat reveal"><b class="mono" data-count="2">0</b><span>proyectos de investigación con datos</span></div>
+      <div class="stat reveal"><b class="mono" data-count="768">0</b><span>horas de inglés (B1)</span></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="wrap section" id="sobre-mi">
+      <h2 class="mono">// sobre_mi</h2>
+      <div class="about">
+        <div class="about-text reveal">
+          <p class="big">Soy ingeniera agrónoma y desarrolladora. Mi camino no es el típico, y eso es mi ventaja.</p>
+          <p>Durante mi tesis en la Universidad Nacional de Loja recolecté datos en fincas de café, los analicé en laboratorio y construí modelos de regresión y machine learning en Python para estimar rendimiento y calidad de taza. Ahí descubrí que lo que más disfruto es convertir datos en herramientas.</p>
+          <p>Hoy desarrollo aplicaciones web completas: desde la base de datos y la seguridad hasta la interfaz y las notificaciones. Mi primera app en producción la usa un negocio real en Loja todos los días.</p>
+        </div>
+        <ul class="values reveal">
+          <li><span class="mono acc">01</span><div><b>Problemas reales primero</b><p>Hablo con quien usa la herramienta antes de escribir código.</p></div></li>
+          <li><span class="mono acc">02</span><div><b>Datos con rigor</b><p>Análisis exploratorio, validación de modelos y conclusiones honestas.</p></div></li>
+          <li><span class="mono acc">03</span><div><b>Aprendo rápido</b><p>Pasé del laboratorio al full-stack con Next.js y Supabase.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="wrap section" id="proyectos">
+      <h2 class="mono">// proyectos</h2>
+      <div class="filters mono" role="tablist" aria-label="Filtrar proyectos">
+        <button class="chip active" data-filter="all" role="tab" aria-selected="true">todos</button>
+        <button class="chip" data-filter="web" role="tab" aria-selected="false">web</button>
+        <button class="chip" data-filter="datos" role="tab" aria-selected="false">datos</button>
+        <button class="chip" data-filter="juegos" role="tab" aria-selected="false">juegos</button>
+      </div>
+      <div class="projects" id="projects"></div>
+      <p class="hint mono">Haz clic en un proyecto para ver detalles →</p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="wrap section" id="experiencia">
+      <h2 class="mono">// experiencia_y_formacion</h2>
+      <div class="timeline">
+        <article class="tl-item reveal">
+          <span class="tl-date mono">2026</span>
+          <div class="card"><h3>Ingeniera Agrónoma</h3><p class="muted">Universidad Nacional de Loja · Facultad Agropecuaria y de Recursos Naturales Renovables</p></div>
+        </article>
+        <article class="tl-item reveal">
+          <span class="tl-date mono">2024 – 2026</span>
+          <div class="card">
+            <h3>Autora · Tesis de investigación</h3>
+            <p class="muted">Universidad Nacional de Loja · Modelos estadísticos para estimar rendimiento y calidad de taza del café</p>
+            <ul>
+              <li>Modelos de regresión lineal, polinomial múltiple y machine learning en Python e InfoStat.</li>
+              <li>Colecta de datos y muestras de café y suelo en fincas de productores.</li>
+              <li>Identifiqué fertilización, densidad de siembra y altitud como variables clave del rendimiento.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="tl-item reveal">
+          <span class="tl-date mono">Mar – Abr 2024</span>
+          <div class="card">
+            <h3>Prácticas preprofesionales · APEOSAE</h3>
+            <p class="muted">Federación de exportadores orgánicos · Nangaritza, Zamora Chinchipe</p>
+            <ul><li>Vivero, injertación y poscosecha de café y cacao orgánico. 360 h completadas.</li></ul>
+          </div>
+        </article>
+        <article class="tl-item reveal">
+          <span class="tl-date mono">2022</span>
+          <div class="card">
+            <h3>Asistente de investigación</h3>
+            <p class="muted">Universidad Nacional de Loja · Proyecto de caracterización de chirimoya nativa</p>
+            <ul><li>Análisis de laboratorio, procesamiento y análisis de los datos del proyecto.</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="wrap section" id="stack">
+      <h2 class="mono">// stack</h2>
+      <div class="skills">
+        <div class="sk card reveal"><small class="mono">frontend</small><div class="tags"><span>Next.js</span><span>React</span><span>TypeScript</span><span>JavaScript</span><span>HTML / CSS</span><span>PWA</span></div></div>
+        <div class="sk card reveal"><small class="mono">backend</small><div class="tags"><span>Supabase</span><span>PostgreSQL</span><span>Row Level Security</span><span>APIs REST</span><span>WhatsApp Cloud API</span></div></div>
+        <div class="sk card reveal"><small class="mono">datos</small><div class="tags"><span>Python</span><span>R</span><span>InfoStat</span><span>Excel</span><span>Regresión múltiple</span><span>Machine learning</span></div></div>
+        <div class="sk card reveal"><small class="mono">herramientas</small><div class="tags"><span>Git</span><span>GitHub</span><span>Vercel</span><span>Claude Code</span></div></div>
+      </div>
+    </section>
+
+    <!-- CERTS & AWARDS -->
+    <section class="wrap section" id="logros">
+      <h2 class="mono">// certificaciones_y_logros</h2>
+      <div class="certs">
+        <div class="cert card reveal"><span class="mono acc">2026</span><b>Claude Code: guía completa para desarrolladores de software</b><small class="muted">Certificado de cumplimiento</small></div>
+        <div class="cert card reveal"><span class="mono acc">2025 – 2026</span><b>Estadística descriptiva e inferencial</b><small class="muted">Florida Global University y GEM</small></div>
+        <div class="cert card reveal"><span class="mono acc">2024 – 2025</span><b>Incentivo de Excelencia Académica</b><small class="muted">Universidad Nacional de Loja</small></div>
+        <div class="cert card reveal"><span class="mono acc">2025</span><b>Expositora de póster científico</b><small class="muted">III Jornadas de Investigación Formativa de Agronomía</small></div>
+      </div>
+    </section>
+
+    <!-- TERMINAL -->
+    <section class="wrap section" id="terminal">
+      <h2 class="mono">// pregúntame_algo</h2>
+      <p class="muted">Una terminal real. Escribe <code class="mono">help</code> o toca un comando.</p>
+      <div class="console card" id="console">
+        <div class="bar"><i></i><i></i><i></i><span class="mono">kely@portafolio: ~</span></div>
+        <div class="console-body mono" id="consoleOut" aria-live="polite"></div>
+        <form class="console-input mono" id="consoleForm" autocomplete="off">
+          <label for="consoleIn" class="acc">kely@portafolio:~$</label>
+          <input id="consoleIn" spellcheck="false" aria-label="Comando">
+        </form>
+      </div>
+      <div class="quick mono" id="quick">
+        <button data-cmd="help">help</button><button data-cmd="sobre">sobre</button><button data-cmd="skills">skills</button><button data-cmd="proyectos">proyectos</button><button data-cmd="contratar">contratar</button><button data-cmd="contacto">contacto</button>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="wrap section contact" id="contacto">
+      <div class="contact-left reveal">
+        <p class="prompt mono">$ contact --kely</p>
+        <h2 class="contact-title">¿Construimos algo juntos?</h2>
+        <p class="muted">Abierta a puestos junior de desarrollo web, análisis de datos y proyectos agrotech.</p>
+        <div class="contact-links mono">
+          <button class="contact-link" data-copy="kely.romero@unl.edu.ec"><span>email</span>kely.romero@unl.edu.ec <em>copiar</em></button>
+          <a class="contact-link" href="https://www.linkedin.com/in/kely-tamara-romero" target="_blank" rel="noopener"><span>linkedin</span>kely-tamara-romero <em>abrir ↗</em></a>
+          <a class="contact-link" href="https://github.com/Kely944" target="_blank" rel="noopener"><span>github</span>Kely944 <em>abrir ↗</em></a>
+        </div>
+      </div>
+      <form class="form card reveal" id="contactForm">
+        <label>Nombre<input name="nombre" required placeholder="Tu nombre"></label>
+        <label>Empresa<input name="empresa" placeholder="Opcional"></label>
+        <label>Motivo
+          <select name="motivo">
+            <option>Oferta de trabajo</option>
+            <option>Entrevista</option>
+            <option>Proyecto freelance</option>
+            <option>Otro</option>
+          </select>
+        </label>
+        <label>Mensaje<textarea name="mensaje" rows="4" required placeholder="Cuéntame sobre el puesto o proyecto"></textarea></label>
+        <button class="btn primary mono" type="submit">enviar_mensaje()</button>
+        <small class="muted">Se abrirá tu cliente de correo con el mensaje listo.</small>
+      </form>
+    </section>
+  </main>
+
+  <footer class="wrap footer mono">
+    <span>© <span id="year"></span> Kely Romero · Loja, Ecuador</span>
+    <a href="#inicio">volver_arriba ↑</a>
+  </footer>
+
+  <!-- PROJECT MODAL -->
+  <dialog class="modal" id="modal">
+    <div class="modal-inner">
+      <button class="icon-btn modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </dialog>
+
+  <div class="toast mono" id="toast" role="status"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
