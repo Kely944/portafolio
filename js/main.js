@@ -89,7 +89,26 @@ function setTheme(t) {
   themeBtn.setAttribute('aria-label', t === 'light' ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro');
   try { localStorage.setItem('theme', t); } catch {}
 }
-themeBtn.addEventListener('click', () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
+// Cambio animado: un círculo se expande desde el botón (View Transitions API).
+function toggleTheme(origin = themeBtn) {
+  const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+  if (!document.startViewTransition || reduceMotion) { setTheme(next); return; }
+  const r = origin.getBoundingClientRect();
+  const x = r.left + r.width / 2;
+  const y = r.top + r.height / 2;
+  const radius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+  themeBtn.classList.add('spin');
+  root.classList.add('vt');
+  const t = document.startViewTransition(() => setTheme(next));
+  t.ready.then(() => {
+    document.documentElement.animate(
+      { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${radius}px at ${x}px ${y}px)`] },
+      { duration: 650, easing: 'cubic-bezier(.65,0,.35,1)', pseudoElement: '::view-transition-new(root)' }
+    );
+  });
+  t.finished.finally(() => { themeBtn.classList.remove('spin'); root.classList.remove('vt'); });
+}
+themeBtn.addEventListener('click', () => toggleTheme());
 setTheme(root.dataset.theme || 'light');
 
 // ===== Nav: menú móvil, sombra, progreso, sección activa =====
@@ -246,7 +265,7 @@ Escribe <b>contacto</b> para hablar.`,
 linkedin  <a href="https://www.linkedin.com/in/kely-tamara-romero" target="_blank" rel="noopener">kely-tamara-romero</a>
 github    <a href="https://github.com/Kely944" target="_blank" rel="noopener">Kely944</a>`,
   cv: () => { const a = document.createElement('a'); a.href = 'assets/CV_Kely_Romero.pdf'; a.download = ''; a.click(); return 'Descargando CV_Kely_Romero.pdf...'; },
-  tema: () => { setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'); return `Tema: ${root.dataset.theme === 'dark' ? 'oscuro' : 'claro'}`; },
+  tema: () => { toggleTheme(input); return `Tema: ${root.dataset.theme === 'dark' ? 'oscuro' : 'claro'}`; },
   clear: () => { out.innerHTML = ''; return null; },
   sudo: () => 'Permiso denegado. Pero puedes contratarme 😉',
   whoami: () => COMMANDS.sobre()

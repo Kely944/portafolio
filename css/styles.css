@@ -76,6 +76,14 @@ code { background: var(--panel-2); padding: 2px 6px; border-radius: 6px; font-si
 .icon-btn:hover { border-color: var(--acc); }
 .icon-btn:active { transform: scale(.94); }
 [data-theme="light"] .i-sun, [data-theme="dark"] .i-moon { display: none; }
+#themeToggle svg { transition: transform .5s cubic-bezier(.65, 0, .35, 1); }
+#themeToggle.spin svg { transform: rotate(360deg) scale(.8); }
+
+/* Transición de tema: la vista nueva se revela con un círculo (ver toggleTheme en main.js) */
+::view-transition-old(root),
+::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+::view-transition-new(root) { z-index: 1; }
+.vt body, .vt body *:not(#themeToggle svg) { transition: none !important; }
 .menu-btn { display: none; }
 
 /* ===== Hero ===== */
