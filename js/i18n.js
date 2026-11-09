@@ -8,7 +8,7 @@ const I18N_EN = {
   'nav.exp': './experience',
   'nav.contact': './contact',
 
-  'hero.title': 'Kely Romero.<br>Developer <span class="acc">&amp; data</span>.',
+  'hero.title': 'Kely Romero.<br>Data <span class="acc">analyst</span>.',
   'hero.lead': 'I build full-stack web apps and machine learning models. I come from agricultural research: I know how to turn field data into decisions and real problems into software that works.',
   'hero.cta': 'view_projects()',
   'hero.copy': 'copy_email',
@@ -16,7 +16,7 @@ const I18N_EN = {
 
   'tldr.head': 'recruiter_mode: 30-second summary',
   'tldr.k1': 'Looking for',
-  'tldr.v1': 'Junior web developer · Data analyst',
+  'tldr.v1': 'Data analyst',
   'tldr.k2': 'Strong in',
   'tldr.v2': 'Next.js, TypeScript, Supabase, Python, statistics',
   'tldr.k3': 'Edge',

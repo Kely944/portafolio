@@ -166,7 +166,7 @@ function setLang(l) {
   langBtn.textContent = ui().langBtn;
   langBtn.setAttribute('aria-label', ui().langLabel);
   $('#modalClose').setAttribute('aria-label', ui().close);
-  document.title = l === 'es' ? 'Kely Romero · Desarrolladora y analista de datos' : 'Kely Romero · Developer & data analyst';
+  document.title = l === 'es' ? 'Kely Romero · Analista de datos' : 'Kely Romero · Data analyst';
   updateThemeLabel();
   renderProjects();
   renderChart();
